@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sms.view.controller.SchoolInfoController">
+    <children>
+        <Label layoutX="40.0" layoutY="91.0" prefHeight="23.0" prefWidth="138.0" text="Name of School :" />
+        <TextField fx:id="name" layoutX="178.0" layoutY="90.0" prefHeight="25.0" prefWidth="242.0" promptText="Name of School" />
+        <Label layoutX="40.0" layoutY="132.0" prefHeight="23.0" prefWidth="138.0" text="Registration Number :" />
+        <TextField fx:id="reg_number" layoutX="178.0" layoutY="131.0" prefHeight="25.0" prefWidth="242.0" promptText="Registration Number" />
+        <Label layoutX="40.0" layoutY="173.0" prefHeight="23.0" prefWidth="138.0" text="Proprietor:" />
+        <TextField fx:id="proprietor" layoutX="178.0" layoutY="172.0" prefHeight="25.0" prefWidth="242.0" promptText="Proprietor" />
+        <JFXButton fx:id="updateDetails" layoutX="327.0" layoutY="542.0" onAction="#updateDetails" text="UPDATE" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+            <stylesheets>
+                <URL value="@css/RegStudent.css" />
+            </stylesheets>
+        </JFXButton>
+        <Pane prefHeight="75.0" prefWidth="900.0" style="-fx-background-color: #1976D2;" stylesheets="@css/RegStudent.css">
+            <children>
+                <Text fx:id="SchoolInfo" fill="WHITE" layoutX="289.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="School Information">
+                    <font>
+                        <Font name="BebasNeue" size="50.0" />
+                    </font>
+                </Text>
+            </children>
+        </Pane>
+      <JFXButton id="button" fx:id="Back" layoutX="26.0" layoutY="1.0" onAction="#Back" text=" ">
+         <graphic>
+            <ImageView fitHeight="64.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: #1976D2;">
+               <image>
+                  <Image url="@../../other/img/Back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <TextField fx:id="id" disable="true" editable="false" layoutX="179.0" layoutY="209.0" prefHeight="26.0" prefWidth="242.0" promptText="School Id" visible="false" />
+    </children>
+</AnchorPane>

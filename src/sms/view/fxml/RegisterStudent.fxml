@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sms.view.controller.RegisterStudentController">
+    <children>
+        <Label layoutX="40.0" layoutY="126.0" prefHeight="23.0" prefWidth="138.0" text="First Name : " />
+        <TextField fx:id="first_name" layoutX="178.0" layoutY="125.0" prefHeight="25.0" prefWidth="242.0" promptText="First Name *" />
+        <Label layoutX="40.0" layoutY="171.0" prefHeight="23.0" prefWidth="138.0" text="Last Name :" />
+        <TextField fx:id="last_name" layoutX="178.0" layoutY="170.0" prefHeight="25.0" prefWidth="242.0" promptText="Last Name  *" />
+        <Label layoutX="40.0" layoutY="218.0" prefHeight="23.0" prefWidth="138.0" text="Phone Number:" />
+        <TextField fx:id="phone_number" layoutX="178.0" layoutY="217.0" prefHeight="25.0" prefWidth="242.0" promptText="Phone Number" />
+        <Label layoutX="40.0" layoutY="266.0" prefHeight="23.0" prefWidth="138.0" text="Email :" />
+        <TextField fx:id="email" layoutX="178.0" layoutY="265.0" prefHeight="25.0" prefWidth="242.0" promptText="Email" />
+        <Label layoutX="40.0" layoutY="316.0" prefHeight="23.0" prefWidth="138.0" text="Date of Birth :" />
+        <Label layoutX="472.0" layoutY="126.0" prefHeight="23.0" prefWidth="138.0" text="City : " />
+        <JFXButton fx:id="AddStudent" layoutX="465.0" layoutY="503.0" onAction="#AddStudent" text="REGISTER" textFill="WHITE">
+            <font>
+                <Font size="25.0" />
+            </font>
+         <stylesheets>
+            <URL value="@css/RegStudent.css" />
+         </stylesheets>
+        </JFXButton>
+        <JFXButton fx:id="reset" layoutX="280.0" layoutY="503.0" onAction="#reset" prefWidth="140.0" text="RESET" textFill="WHITE">
+            <font>
+                <Font size="25.0" />
+            </font>
+         <stylesheets>
+            <URL value="@css/RegStudent.css" />
+         </stylesheets>
+        </JFXButton>
+      <Pane prefHeight="85.0" prefWidth="900.0" style="-fx-background-color: #1976D2;" stylesheets="@css/RegStudent.css">
+         <children>
+              <Text fill="WHITE" layoutX="273.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="student registration">
+                  <font>
+                      <Font name="BebasNeue" size="50.0" />
+                  </font>
+              </Text>
+         </children>
+      </Pane>
+      <JFXButton id="button" fx:id="Back" layoutX="25.0" layoutY="10.0" onAction="#Back" text=" ">
+         <graphic>
+            <ImageView fitHeight="64.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: #1976D2;">
+               <image>
+                  <Image url="@../../other/img/Back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <DatePicker fx:id="date_of_birth" layoutX="179.0" layoutY="315.0" prefHeight="26.0" prefWidth="242.0" promptText="Date of Birth *" />
+      <Label layoutX="472.0" layoutY="87.0" prefHeight="26.0" prefWidth="386.0" text="Address ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="address_city" layoutX="604.0" layoutY="125.0" prefHeight="25.0" prefWidth="242.0" promptText="City" />
+      <Label layoutX="472.0" layoutY="171.0" prefHeight="23.0" prefWidth="138.0" text="Street and House No : " />
+      <TextField fx:id="address_street_and_house_no" layoutX="604.0" layoutY="170.0" prefHeight="25.0" prefWidth="242.0" promptText="Street and House No" />
+      <Label layoutX="472.0" layoutY="218.0" prefHeight="23.0" prefWidth="138.0" text="Region : " />
+      <TextField fx:id="address_region" layoutX="604.0" layoutY="217.0" prefHeight="25.0" prefWidth="242.0" promptText="Region" />
+      <Label layoutX="472.0" layoutY="266.0" prefHeight="23.0" prefWidth="138.0" text="Sub Region : " />
+      <TextField fx:id="address_subregion" layoutX="604.0" layoutY="265.0" prefHeight="25.0" prefWidth="242.0" promptText="Sub Region" />
+      <Label layoutX="472.0" layoutY="316.0" prefHeight="23.0" prefWidth="138.0" text="Country :" />
+      <TextField fx:id="address_country" layoutX="604.0" layoutY="315.0" prefHeight="25.0" prefWidth="242.0" promptText="Country" />
+      <Label layoutX="39.0" layoutY="87.0" prefHeight="26.0" prefWidth="386.0" text="Student Details">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="363.0" prefHeight="23.0" prefWidth="138.0" text="Class" />
+      <ChoiceBox fx:id="class_id" layoutX="178.0" layoutY="362.0" prefHeight="26.0" prefWidth="242.0" />
+    </children>
+</AnchorPane>
